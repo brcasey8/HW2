@@ -1,0 +1,79 @@
+.site-header {
+ flex-wrap: wrap;
+ background: #0D1313;
+ align-items: center;
+ padding: 0.5rem;
+ color: white;
+ display: flex;
+ // width: 100%;
+
+ body.fixed-nav & {
+  position: fixed;
+  box-shadow:0 5px 3px rgba(0,0,0,0.1);
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
+
+@media (min-width: $break-two) {
+  flex-wrap: nowrap;
+}
+}
+
+.site-nav {
+  display:none;
+  background: #333;
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: $break-two) {
+    order: 1;
+    background: none;
+  }
+  @media (min-width: $break-one) {
+    order: 2;
+    width: 100%;
+    display:flex;
+  }
+}
+
+
+.account-dropdown {
+  ul {
+    display: none;
+  }
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px;
+}
+
+.account-actions {
+  display: none;
+
+  @media (min-width: $break-two) {
+    order: 2;
+    white-space: nowrap;
+  }
+  @media (min-width: $break-one) {
+   margin-left: auto;
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+ }
+}
+
+.sign-out-link {
+  color: #62DEBE;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
